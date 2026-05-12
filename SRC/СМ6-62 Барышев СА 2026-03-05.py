@@ -229,15 +229,15 @@ class Point_Substitution(Cannon_System_Parameters):
         return self.point_substitution(t, x, self.T_03)
 
     def report_min(self, t, x)-> list[int | Any]:
-        """Список входных параметров для функции RungeKutta4 в ODE_solvers при T_0 = - 50 град C"""
+        """Список выходных параметров для функции RungeKutta4 в ODE_solvers при T_0 = - 50 град C"""
         return [self.psi(x[5]), self.p_m(x, self.T_01)/1e6, x[0] - self.l_0]
 
     def report_norm(self, t, x)-> list[int | Any]:
-        """Список входных параметров для функции RungeKutta4 в  ODE_solvers при T_0 = + 15 град C"""
+        """Список выходных параметров для функции RungeKutta4 в  ODE_solvers при T_0 = + 15 град C"""
         return [self.psi(x[5]), self.p_m(x, self.T_02) / 1e6, x[0] - self.l_0]
 
     def report_max(self, t, x)-> list[int | Any]:
-        """Список входных параметров  для функции RungeKutta4 в  ODE_solvers при T_0 = + 50 град C"""
+        """Список выходных параметров  для функции RungeKutta4 в  ODE_solvers при T_0 = + 50 град C"""
         return [self.psi(x[5]), self.p_m(x, self.T_03) / 1e6, x[0] - self.l_0]
 
 
