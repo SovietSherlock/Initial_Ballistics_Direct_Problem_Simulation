@@ -237,7 +237,7 @@ class Point_Substitution(Cannon_System_Parameters):
         return [self.psi(x[5]), self.p_m(x, self.T_02) / 1e6, x[0] - self.l_0]
 
     def report_max(self, t, x)-> list[int | Any]:
-        """Список выходных параметров  для функции RungeKutta4 в  ODE_solvers при T_0 = + 50 град C"""
+        """Список выходных параметров для функции RungeKutta4 в  ODE_solvers при T_0 = + 50 град C"""
         return [self.psi(x[5]), self.p_m(x, self.T_03) / 1e6, x[0] - self.l_0]
 
 
